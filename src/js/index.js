@@ -33,6 +33,7 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
+          
           <h1>${variables.name} ${variables.lastname}</h1>
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
@@ -45,6 +46,14 @@ function render(variables = {}) {
         </div>
     `;
 }
+
+//function replaceNull (value){
+//    switch (value) {
+//        case name:{
+//            return (name === null)?
+//        }
+//    }
+//}
 
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
