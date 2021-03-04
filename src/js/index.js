@@ -34,26 +34,51 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           
-          <h1>${variables.name} ${variables.lastname}</h1>
-          <h2>${variables.role}</h2>
-          <h3>${variables.city}, ${variables.country}</h3>
+          <h1>${variables.name === null ? "Little" : variables.name} 
+          ${variables.lastname === null ? "Duck" : variables.lastname}</h1>
+          <h2>${variables.role === null ? "Dreamer" : variables.role}</h2>
+          <h3>${variables.city === null ? "Head" : variables.city}, ${
+    variables.country === null ? "Pillow" : variables.country
+  }</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${variables.twitter}"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/${variables.github}"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/${variables.instagram}"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${
+              variables.twitter
+            }"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${
+              variables.github
+            }"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${
+              variables.linkedin
+            }"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram
+            }"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
 }
 
-//function replaceNull (value){
-//    switch (value) {
-//        case name:{
-//            return (name === null)?
-//        }
-//    }
-//}
+/**
+function replaceNull(value) {
+  switch (value) {
+    case "name": {
+      return name === null ? "Little" : value;
+    }
+    case "lastname": {
+      return lastname === null ? "Duck" : value;
+    }
+    case "role": {
+      return role === null ? "Dreamer" : value;
+    }
+    case "city": {
+      return city === null ? "Bed" : value;
+    }
+    case "country": {
+      return country === null ? "Room" : value;
+    }
+  }
+}
+ */
 
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
@@ -70,7 +95,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
